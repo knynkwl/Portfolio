@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import './globals.css'
 
 const Lora = localFont({ src: './lora.woff2' })
@@ -16,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={Lora.className}>{children}</body>
+      <body className={Lora.className}>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   )
 }
