@@ -1,0 +1,16 @@
+.fadeInUpList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .fadeInUpItem {
+    opacity: 0;
+    transform: translate(-10px, -10px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .fadeInUpItem.active {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
