@@ -3,7 +3,7 @@ import localFont from 'next/font/local'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import './globals.css'
 
-const Lora = localFont({ src: './lora.woff2' })
+const Lora = localFont({ src: '../../public/lora.woff2' })
 
 export const metadata: Metadata = {
   title: 'Kenyon Kowal',
