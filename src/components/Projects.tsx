@@ -5,8 +5,8 @@ import shuffle from '@/utils/shuffle';
 
 const project_images: string[] = [
   '/project-mush.webp|https://eatmush.com',
-  '/project-britax.webp|https://britax.com',
-  '/project-documented.webp|https://documented.org',
+  '/project-britax.webp|https://us.britax.com',
+  '/project-documented.webp|https://documented.net',
   '/project-sizzer.webp|https://sizzer.nl',
   '/project-ivy.webp|https://www.ivyconnection.com',
   '/project-mcbride.webp|https://mcbridedesign.com',
