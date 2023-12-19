@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import './globals.css'
+require('dotenv').config();
 
 const Lora = localFont({ src: '../../public/Lora.woff2' })
 

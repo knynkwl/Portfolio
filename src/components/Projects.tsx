@@ -13,8 +13,10 @@ const project_images: string[] = [
   '/project-f-suite.webp|https://www.fsuite.co',
 ];
 
+const cubicEaseOut = (t: number) => 1 - Math.pow(1 - t, 3);
 const lerp = (start: number, end: number, factor: number) => {
-  return start * (1 - factor) + end * factor;
+  const easedFactor = cubicEaseOut(factor);
+  return start * (1 - easedFactor) + end * easedFactor;
 };
 
 interface ProjectsProps {
@@ -56,7 +58,7 @@ const Projects: React.FC<ProjectsProps> = ({showContent}) => {
   };
 
   const handleMouseEnter = () => {
-    setLerpFactor(0.04)
+    setLerpFactor(0.02)
   }
   
   const handleMouseLeave = () => {
