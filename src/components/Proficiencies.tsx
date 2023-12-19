@@ -70,12 +70,12 @@ const Proficiencies: React.FC<ProficienciesProps> = ({showContent}) => {
     <div className="">
       {shuffledSkills.length > 0 && (
         <ul 
-          className="inline-flex flex-wrap gap-2 md:gap-3 max-w-[680px]"
+          className="inline-flex flex-wrap gap-2 md:gap-2 max-w-[680px]"
           onMouseOver={handleHover}
           onMouseLeave={handleMouseLeave}>
           {shuffledSkills.map((item, index) => (
             <li 
-              className={`rounded-full pt-[5px] pb-[7px] px-[14px] md:px-[19px] text-xs md:text-sm mix-blend-exclusion bg-[#001a646e] text-[#4877FF] pointer-events-none ${styles.fadeInUpItem} ${activeIndexes.includes(index) ? styles.active  : ''}`} 
+              className={`rounded-full pt-[3px] pb-[5px] px-[14px] md:px-[19px] text-sm mix-blend-exclusion bg-[#001a646e] text-[#4877FF] pointer-events-none ${styles.fadeInUpItem} ${activeIndexes.includes(index) ? styles.active  : ''}`} 
               style={{ transitionDelay: `${hasHovered ? 0.01 : index * 0.05}s`, opacity: `${hasHovered && (isHovered && item.includes('|personal') ? '0.3' : '1')}` }}
               key={index}>
               {item.replace("|personal", "")}

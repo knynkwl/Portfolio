@@ -7,7 +7,7 @@ interface FormData {
   honeypot: string;
 }
 
-const ContactForm: React.FC<Readonly<FormData>> = ({ email, name }) => {
+const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -73,7 +73,7 @@ const ContactForm: React.FC<Readonly<FormData>> = ({ email, name }) => {
     }
   };
 
-  const inputClasses = 'w-full py-2 bg-transparent bg-[transparent] border-b-[1px] border-[#091949] focus:outline-none  focus:border-white text-white placeholder:text-blue-3 text-sm';
+  const inputClasses = 'w-full py-2 bg-transparent bg-[transparent] border-b-[1px] border-[#091949] focus:outline-none  focus:border-blue-3 text-white placeholder:text-blue-3 text-sm';
 
   return (
     <div className={`absolute z-20 right-0 top-0 m-5 w-[350px] pt-2 pb-4 px-6 bg-blue-1 bg-opacity-20 border border-[#091949] shadow-xl shadow-blue-2 backdrop-blur-md transition-all duration-500 transform ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
