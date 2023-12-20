@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { LenisScroller } from "@/components/LenisScroller";
+
 import './globals.css'
 require('dotenv').config();
 
@@ -21,6 +23,7 @@ export default function RootLayout({
       <body className={Lora.className}>
         {children}
         <SpeedInsights />
+        <LenisScroller />
       </body>
     </html>
   )

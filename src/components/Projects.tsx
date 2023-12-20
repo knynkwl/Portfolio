@@ -13,6 +13,7 @@ const project_images: string[] = [
   '/project-f-suite.webp|https://www.fsuite.co',
 ];
 
+
 const cubicEaseOut = (t: number) => 1 - Math.pow(1 - t, 3);
 const lerp = (start: number, end: number, factor: number) => {
   const easedFactor = cubicEaseOut(factor);
@@ -69,12 +70,12 @@ const Projects: React.FC<ProjectsProps> = ({showContent}) => {
   useEffect(() => {
     // Shuffle the skills array
     const shuffled = shuffle([...project_images]);
-    setShuffledSkills(shuffled);
+    setShuffledSkills(shuffled.concat(shuffled.slice(0, 3)));
 
     if (showContent) {
       // Set up a timer to add 'active' class with a delay for each item
       const timer = setTimeout(() => {
-        setActiveIndexes(Array.from({ length: shuffled.length }, (_, index) => index));
+        setActiveIndexes(Array.from({ length: shuffledSkills.length }, (_, index) => index));
       }, 1000);
 
       // Clear the timer when the component is unmounted or when the skills change
@@ -102,18 +103,18 @@ const Projects: React.FC<ProjectsProps> = ({showContent}) => {
 
   return (
     <div
-      className="flex justify-center items-center gap-10 w-full md:fixed bottom-0 left-0 transform md:p-0 p-[30px]"
-      onMouseMove={handleMouseMove}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      className="flex justify-end w-full gap-10 h-full transform md:p-0 p-[30px]"
+      // onMouseMove={handleMouseMove}
+      // onMouseEnter={handleMouseEnter}
+      // onMouseLeave={handleMouseLeave}
     >
-      <div ref={containerRef} className="md:flex grid w-full md:w-auto grid-cols-2 gap-3 md:gap-10 will-change-transform" style={{ transform: `translateX(${transformX}px)` }}>
+      <div ref={containerRef} className="md:flex flex-col grid h-full md:w-auto grid-cols-2 will-change-transform" style={{ transform: `translateX(${transformX}px)` }}>
         {shuffledSkills.map((image, index) => (
           <a
             key={index}
             href={`${image.split('|')[1]}`}
             target='_blank'
-            className={`group relative w-full md:w-[400px] pb-[53%] md:pb-[7%] flex-shrink-0 transition-transform duration-500 inline-block ${styles.fadeInUpItem} ${activeIndexes.includes(index) ? styles.active  : ''}`} 
+            className={`group relative w-full md:w-[33vw] h-[33.33vh] flex-shrink-0 transition-transform duration-500 inline-block ${styles.fadeInUpItem} ${activeIndexes.includes(index) ? styles.active  : ''}`} 
             style={{ transitionDelay: `${index * 0.2}s` }}
           >
             <Image 
@@ -121,8 +122,8 @@ const Projects: React.FC<ProjectsProps> = ({showContent}) => {
               alt="Project" 
               fill={true} 
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className={`relative z-20 flex-shrink-0 md:translate-y-4 group-hover:-translate-y-0 transition-transform duration-500 object-contain md:object-top md:object-cover will-change-transform`} />
-            <div className="absolute bottom-[100%] left-0 w-full p-2 bg-[#001a646e] hidden md:inline-block md:translate-y-40 group-hover:-translate-y-0 transition-transform duration-500 z-10 text-blue-3 text-sm text-center will-change-transform">{image.split('|')[1].replace('https://', '')}</div>
+              className={`relative z-20 flex-shrink-0 scale-95 transition-transform duration-500 object-cover object-top will-change-transform`} />
+            {/* <div className="absolute bottom-[100%] left-0 w-full p-2 bg-[#001a646e] hidden md:inline-block md:translate-y-40 group-hover:-translate-y-0 transition-transform duration-500 z-10 text-blue-3 text-sm text-center will-change-transform">{image.split('|')[1].replace('https://', '')}</div> */}
           </a>
         ))}
       </div>
