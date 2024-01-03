@@ -93,6 +93,7 @@ export default function PageModal({
               {item.sectionType === 'video' && (
                 <video 
                   key={`video-${index}`}
+                  loading="lazy"
                   autoPlay
                   muted
                   loop>
