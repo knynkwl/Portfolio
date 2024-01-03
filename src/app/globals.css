@@ -25,3 +25,7 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.underline-links a {
+  text-decoration: underline;
+}

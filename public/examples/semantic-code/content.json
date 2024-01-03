@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "sectionType": "title",
+      "text": "Semantic Code"
+    },
+    {
+      "sectionType": "heading",
+      "text": "Some kind of heading"
+    },
+    {
+      "sectionType": "text",
+      "text": "From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage."
+    },
+    {
+      "sectionType": "code",
+      "file": "01.twig",
+      "fileType": "twig"
+    },
+    {
+      "sectionType": "image",
+      "file": "example.webp",
+      "alt": "Example Image"
+    },
+    {
+      "sectionType": "text",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliq uet massa nisl quis nisl. Nu llam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquet massa nisl quis nisl. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquet massa nisl quis nisl. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquet massa nisl quis nisl. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquet massa nisl quis nisl. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquet massa nisl quis nisl. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquet massa nisl quis nisl. "
+    }
+  ]
+}

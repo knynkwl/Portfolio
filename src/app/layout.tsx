@@ -18,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={Lora.className}>
-        {children}
+        <main className="flex min-h-screen items-center justify-center bg-blue-1">
+          {children}
+        </main>
         <SpeedInsights />
       </body>
     </html>

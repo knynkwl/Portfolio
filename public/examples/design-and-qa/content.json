@@ -1,0 +1,37 @@
+{
+  "data": [
+    {
+      "sectionType": "title",
+      "text": "Design & QA"
+    },
+    {
+      "sectionType": "heading",
+      "text": "Mcbride Design Co."
+    },
+    {
+      "sectionType": "text",
+      "text": "The McBride Design Co. website was a project I worked on while at <a href=\"http://www.mcbri.de\" target=\"_blank\">McBride Design Co.</a> The site was built using <a href=\"http://www.twig.sensiolabs.org/\" target=\"_blank\">Twig</a> and <a href=\"http://www.silex.sensiolabs.org/\" target=\"_blank\">Silex</a> and was designed by <a href=\"http://www.mcbri.de\" target=\"_blank\">McBride Design Co.</a>."
+    },
+    {
+      "sectionType": "video",
+      "file": "mcbride-hover-states.webm"
+    },
+    {
+      "sectionType": "text",
+      "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis tincidunt aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl. Sed euismod, nisl quis tincidunt aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl."
+    },
+    {
+      "sectionType": "video",
+      "file": "mcbride-image-loader.webm"
+    },
+    {
+      "sectionType": "text",
+      "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis tincidunt aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl. Sed euismod, nisl quis tincidunt aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl."
+    },
+    {
+      "sectionType": "code",
+      "file": "01.twig",
+      "fileType": "twig"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "data": [
+    {
+      "sectionType": "heading",
+      "text": "CSS"
+    },
+    {
+      "sectionType": "text",
+      "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis tincidunt aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl. Sed euismod, nisl quis tincidunt aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl."
+    },
+    {
+      "sectionType": "code",
+      "file": "01.twig",
+      "fileType": "twig"
+    }
+  ]
+}
