@@ -4,8 +4,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import fetchData from '@/app/utils/fetchData';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import nightOwl from 'react-syntax-highlighter/dist/esm/styles/prism/night-owl';
-import Background from '@/components/Background';
 import Image from 'next/image';
+import Video from '@/components/Video';
+// import Background from '@/components/Background';
 import parse from 'html-react-parser';
 
 interface DataItem {
@@ -58,25 +59,42 @@ export default function PageModal({
     }
   }, [data, slug, file_path]);
 
+  const handleOnClick = (e: React.MouseEvent<HTMLElement>) => {
+    const target = e.target as HTMLElement;
+    const parent = target.parentElement as HTMLElement;
+
+    if (parent.classList.contains('expanded')) {
+      parent.classList.remove('expanded');
+    } else {
+      parent.classList.add('expanded');
+    }
+  }
+
   return (
     <article className="w-full p-8">
       <div className={`relative bg-blue-2 border border-[#091949] overflow-y-scroll md:overflow-hidden w-full max-w-5xl p-6 mx-auto duration-500 transition-all transform ${data.length ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
         
-        <div className="examples relative z-10 flex flex-col gap-8">
+        <div className="examples relative z-10 flex items-start flex-col gap-8">
           {data && data.map((item: any, index: number) => (
             <React.Fragment key={index}>
               {item.sectionType === 'title' && (
-                <h1 key={`title-${index}`} className="text-4xl">{item.text}</h1>
+                <h1 key={`title-${index}`} className="text-4xl font-display">{item.text}</h1>
               )}
 
               {item.sectionType === 'heading' && (
-                <h2 key={`heading-${index}`} className="text-3xl">{item.text}</h2>
+                <h2 key={`heading-${index}`} className="text-3xl font-display">{item.text}</h2>
               )}
 
               {item.sectionType === 'text' && (
-                <p key={`text-${index}`} className="text-xl leading-8 underline-links">
+                <p key={`text-${index}`} className="text-xl leading-9 opacity-70 underline-links font-body">
                   {parse(item.text)}
                 </p>
+              )}
+
+              {item.sectionType === 'button' && (
+                <a key={`text-${index}`} href={item.url} target="_blank" className="bg-blue-3 text-white px-4 py-2 rounded-md inline-block">
+                  {item.text}
+                </a>
               )}
 
               {item.sectionType === 'image' && (
@@ -87,22 +105,29 @@ export default function PageModal({
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-[300px] h-auto"/>
+                  className={`h-auto w-full`}
+                  style={item.maxWidth ? { maxWidth: item.maxWidth } : {}}/>
               )}
 
               {item.sectionType === 'video' && (
-                <video 
+                <Video
                   key={`video-${index}`}
                   loading="lazy"
-                  autoPlay
+                  autoplay
                   muted
-                  loop>
+                  loop
+                  style={item.maxWidth ? { maxWidth: item.maxWidth } : {}}>
                   <source src={`/${file_path}${item.file}`} type="video/webm" />
-                </video>
+                </Video>
               )}
 
               {item.fileContent && (
-                <SyntaxHighlighter key={`highlight-${index}`} className="opacity-80" language={item.fileType} style={nightOwl}>
+                <SyntaxHighlighter 
+                  key={`highlight-${index}`} 
+                  className="opacity-80 [&>*]:!font-body max-w-full" 
+                  language={item.fileType} 
+                  style={nightOwl}
+                  onClick={handleOnClick}>
                   {item.fileContent}
                 </SyntaxHighlighter>
               )}
@@ -110,7 +135,7 @@ export default function PageModal({
           ))}
         </div>
 
-        <Background />
+        {/* <Background /> */}
       </div>
     </article>
   );

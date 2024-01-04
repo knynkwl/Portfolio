@@ -5,13 +5,22 @@
       "text": "Accessibility"
     },
     {
-      "sectionType": "text",
-      "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis tincidunt aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl. Sed euismod, nisl quis tincidunt aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl."
+      "sectionType": "heading",
+      "text": "Menu Tab Trap"
     },
     {
-      "sectionType": "code",
-      "file": "01.twig",
-      "fileType": "twig"
+      "sectionType": "text",
+      "text": "Here is an example of a tab trap that I built. Opening the menu will trap the tab so the user can close and filter through the items without tabbing into the content outside. It is is accessible by keyboard and mouse."
+    },
+    {
+      "sectionType": "button",
+      "text": "View site",
+      "url": "https://documented.net/"
+    },
+    {
+      "sectionType": "video",
+      "file": "documented-tab-trap.webm",
+      "maxWidth": "400px"
     }
   ]
 }

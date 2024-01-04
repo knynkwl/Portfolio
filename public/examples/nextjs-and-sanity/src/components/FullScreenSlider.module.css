@@ -1,0 +1,17 @@
+.fullScreenSlider,
+.slidesContainer,
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.slide img {
+  object-fit: cover;
+}
+
+.slide.active {
+  display: block;
+}

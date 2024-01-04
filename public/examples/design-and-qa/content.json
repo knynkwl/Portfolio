@@ -10,28 +10,48 @@
     },
     {
       "sectionType": "text",
-      "text": "The McBride Design Co. website was a project I worked on while at <a href=\"http://www.mcbri.de\" target=\"_blank\">McBride Design Co.</a> The site was built using <a href=\"http://www.twig.sensiolabs.org/\" target=\"_blank\">Twig</a> and <a href=\"http://www.silex.sensiolabs.org/\" target=\"_blank\">Silex</a> and was designed by <a href=\"http://www.mcbri.de\" target=\"_blank\">McBride Design Co.</a>."
+      "text": "I was the primary and only developer for <a href=\"http://www.mcbri.de\" target=\"_blank\">The McBride Design Co.</a>. This project was built with CraftCMS, TailwindCSS, and Twig."
+    },
+    {
+      "sectionType": "text",
+      "text": "When it came to UI interations and animations, I was able to use my knowledge of CSS and Javascript to create a unique experience for the user. The designs were provided statically without any animations or interactions note or guides, so I was able to use my own creativity to bring the designs to life."
+    },
+    {
+      "sectionType": "heading",
+      "text": "Homepage and navigation animations and interactions"
+    },
+    {
+      "sectionType": "video",
+      "file": "mcbride.webm"
+    },
+    {
+      "sectionType": "heading",
+      "text": "Logo animation for loading states"
+    },
+    {
+      "sectionType": "video",
+      "file": "mcbride-logo.webm",
+      "maxWidth": "290px"
+    },
+    {
+      "sectionType": "heading",
+      "text": "Staff Easter Eggs"
+    },
+    {
+      "sectionType": "text",
+      "text": "The client wanted an easter egg for the changing staff picktures. Initially the designer came up with a solution where the user would have to hover over the images to see the easter egg. After inital UX testing, I found users were not hovering over the images, so I came up with a solution where the easter egg would be triggered after X amount of time."
     },
     {
       "sectionType": "video",
       "file": "mcbride-hover-states.webm"
     },
     {
-      "sectionType": "text",
-      "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis tincidunt aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl. Sed euismod, nisl quis tincidunt aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl."
+      "sectionType": "heading",
+      "text": "Image loading animation"
     },
     {
       "sectionType": "video",
       "file": "mcbride-image-loader.webm"
-    },
-    {
-      "sectionType": "text",
-      "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis tincidunt aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl. Sed euismod, nisl quis tincidunt aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl."
-    },
-    {
-      "sectionType": "code",
-      "file": "01.twig",
-      "fileType": "twig"
     }
   ]
 }
