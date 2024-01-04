@@ -1,0 +1,40 @@
+{% set image = article.media[0] ?? null %}
+{% set category = article.newsType[0] %}
+
+<article class="{{loop.first ? 'md:pr-20 md:pt-0' : 'md:pl-20 md:pt-100'}} md:border-t-0 border-t border-black pt-20">
+  <a href="{{ article.externalUrl ?? article.url }}" class="group"{% if article.externalUrl %} target="_blank" rel="nofollow"{% endif %}>
+    {% if image %}
+      {% include "_partials/image" with {
+        image: image,
+        loader: true,
+        classes: {
+          img: 'w-full group-hover:opacity-80',
+          picture: 'md:mb-0 inline-block w-full relative bg-black block text-white align-bottom'
+        },
+        sizes: {
+          xs: '510x365',
+          sm: '800x575',
+          md: '510x365',
+          lg: '800x575'
+        }
+      } %}
+    {% else %}
+      <div class="w-full">
+        <div class="ratio-16/9 bg-black text-white">
+          <div class="u-fill-space flex items-center justify-center">
+            <div class="w-100">{% include "_partials/logos/brand-mark-fluid" %}</div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="py-12 flex flex-wrap justify-between items-center md:border-b border-black">
+      <h1 class="text-style-d6">{{article.title}}</h1>
+
+      <span class="text-style-m2 uppercase text-white inline-block leading-10 ml-10">{% include "_partials/art-text" with {
+        text: '{scribble-2-start}' ~ category ~ '{scribble-2-end}',
+        classes: 'py-5 px-6'
+      } %}</span>
+    </div>
+  </a>
+</article>

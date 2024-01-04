@@ -10,7 +10,7 @@
     },
     {
       "sectionType": "text",
-      "text": "Below is a NextJS announcement slider component for the new <a href='https://chalkfestival.org' target='_blank'>Chalk Festival</a> website that I am building, employing hooks like <b>useState</b>, <b>useEffect</b>, and <b>useMemo</b>. It utilizes the <b>jotai</b> state management library with to manage app states. The slider allows navigation between announcements through buttons. The data is fetched asynchronously using the <b>fetchData</b> utility from the Sanity.io client. The component dynamically renders announcements based on fetched data, and each announcement may include an optional link."
+      "text": "Below is a NextJS announcement slider component for the new <a href='https://chalkfestival.org' target='_blank'>Chalk Festival</a> website that I am designing and building. It utilizes the <b>jotai</b> state management library with to manage app states. The slider allows navigation between announcements through buttons. The data is fetched asynchronously using the <b>fetchData</b> utility from the Sanity.io client. The component dynamically renders announcements based on fetched data, and each announcement may include an optional link."
     },
     {
       "sectionType": "image",
