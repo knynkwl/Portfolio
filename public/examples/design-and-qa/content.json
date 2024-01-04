@@ -6,11 +6,11 @@
     },
     {
       "sectionType": "heading",
-      "text": "Mcbride Design Co."
+      "text": "The McBride Company"
     },
     {
       "sectionType": "text",
-      "text": "I was the primary and only developer for <a href=\"http://www.mcbri.de\" target=\"_blank\">The McBride Design Co.</a>. This project was built with CraftCMS, TailwindCSS, and Twig."
+      "text": "I was the primary and only developer for <a href=\"https://mcbridedesign.com\" target=\"_blank\">The McBride Company</a>. This project was built with CraftCMS, TailwindCSS, and Twig."
     },
     {
       "sectionType": "text",
@@ -35,7 +35,7 @@
     },
     {
       "sectionType": "text",
-      "text": "There was no loading animations in the design when it was passed to development. Below are a couple examples of UI loaders I created to add some flare to the site."
+      "text": "There were no loading animations in the design when it was passed to development. Below are a couple of examples of UI loaders I created to add some flare to the site."
     },
     {
       "sectionType": "text",
@@ -60,7 +60,7 @@
     },
     {
       "sectionType": "text",
-      "text": "The client wanted an easter egg for the changing staff picktures. Initially the designer came up with a solution where the user would have to hover over the images to see the easter egg. After inital UX testing, I found users were not hovering over the images, so I came up with a solution where the easter egg would be triggered after X amount of time."
+      "text": "The client wanted an easter egg for the changing staff pictures. Initially, the designer came up with a solution where the user would have to hover over the images to see the easter egg. After UX testing, I found users were not hovering over the images, so I came up with a solution where the easter egg would be triggered after X amount of time."
     },
     {
       "sectionType": "video",

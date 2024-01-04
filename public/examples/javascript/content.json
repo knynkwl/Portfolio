@@ -6,7 +6,12 @@
     },
     {
       "sectionType": "text",
-      "text": "The javascript below handles the search functionality for <a href='https://documented.net/media' target='_blank'>Documented media page</a>. It uses the documentcloud API to search for documents with the given query. The results are then cross referenced with the documents in the database to find related documents."
+      "text": "The javascript below handles the search functionality for <a href='https://documented.net/media' target='_blank'>Documented's media page</a>. It uses the documentcloud API to search for documents with the given query. The results are then cross referenced with the documents in the database to find related documents."
+    },
+    {
+      "sectionType": "button",
+      "text": "Visit media page",
+      "url": "https://documented.net/media"
     },
     {
       "sectionType": "image",
@@ -16,6 +21,11 @@
       "sectionType": "code",
       "file": "DocumentSearch.js",
       "fileType": "js"
+    },
+    {
+      "sectionType": "button",
+      "text": "Visit media page",
+      "url": "https://documented.net/media"
     }
   ]
 }

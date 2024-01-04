@@ -1,12 +1,12 @@
 {
   "data": [
     {
-      "sectionType": "heading",
+      "sectionType": "title",
       "text": "CSS"
     },
     {
       "sectionType": "text",
-      "text": "When writing custom CSS, I like to use the follow structure below. This is code from <a href='https://us.britax.com/new-parents'>us.britax.com</a>. The example below illustrates mobile-first and BEM naming convention."
+      "text": "When writing custom CSS, I like to use the folder structure below. This is code from <a href='https://us.britax.com/new-parents'>us.britax.com</a>. The example below illustrates mobile-first and BEM naming convention."
     },
     {
       "sectionType": "button",
@@ -14,9 +14,21 @@
       "url": "https://us.britax.com/new-parents"
     },
     {
+      "sectionType": "text",
+      "text": "below is how I structure the app.css imports."
+    },
+    {
       "sectionType": "code",
       "file": "documented-app.css",
       "fileType": "sass"
+    },
+    {
+      "sectionType": "heading",
+      "text": "feature-tabber.css"
+    },
+    {
+      "sectionType": "text",
+      "text": "Below is a screenshot and code for the feature tabber component."
     },
     {
       "sectionType": "image",
