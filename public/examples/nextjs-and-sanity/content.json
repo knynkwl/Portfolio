@@ -9,6 +9,11 @@
       "text": "Below is a NextJS component serves as an announcement slider for a website that I am building, employing hooks like <b>useState</b>, <b>useEffect</b>, and <b>useMemo</b>. It utilizes the <b>jotai</b> state management library with the <b>useStore</b> and <b>useAtomValue</b> hooks to manage app states. The slider allows navigation between announcements through buttons, while the data is fetched asynchronously using the <b>fetchData</b> utility. The component dynamically renders announcements based on fetched data, and each announcement may include an optional link."
     },
     {
+      "sectionType": "button",
+      "text": "View Demo",
+      "url": "https://the-chalk-festival.vercel.app/"
+    },
+    {
       "sectionType": "heading",
       "text": "AnnouncementSlider.tsx"
     },
