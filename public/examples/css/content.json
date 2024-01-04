@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "sectionType": "title",
+      "text": "CSS"
+    },
+    {
+      "sectionType": "text",
+      "text": "When writing custom CSS, I like to use the folder structure below. This is code from <a href='https://us.britax.com/new-parents'>us.britax.com</a>. The example below illustrates mobile-first and BEM naming convention."
+    },
+    {
+      "sectionType": "button",
+      "text": "View Site",
+      "url": "https://us.britax.com/new-parents"
+    },
+    {
+      "sectionType": "text",
+      "text": "below is how I structure the app.css imports."
+    },
+    {
+      "sectionType": "code",
+      "file": "documented-app.css",
+      "fileType": "sass"
+    },
+    {
+      "sectionType": "heading",
+      "text": "feature-tabber.css"
+    },
+    {
+      "sectionType": "text",
+      "text": "Below is a screenshot and code for the feature tabber component."
+    },
+    {
+      "sectionType": "image",
+      "file": "britax-tabber.png"
+    },
+    {
+      "sectionType": "code",
+      "file": "feature-tabber.css",
+      "fileType": "sass",
+      "expandable": true
+    }
+  ]
+}

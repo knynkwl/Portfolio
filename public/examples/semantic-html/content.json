@@ -1,0 +1,53 @@
+{
+  "data": [
+    {
+      "sectionType": "title",
+      "text": "Semantic Code"
+    },
+    {
+      "sectionType": "text",
+      "text": "Semantics plays a crucial role in my approach to building software. In every project I undertake, I prioritize semantic correctness to ensure that the codebase is not only functional but also easy to understand and maintain. By adhering to semantic principles, I aim to make the code more meaningful and intuitive, promoting clarity for both myself and any collaborators who may work with the code in the future."
+    },
+    {
+      "sectionType": "heading",
+      "text": "The McBride Comapny"
+    },
+    {
+      "sectionType": "text",
+      "text": "These examples are from The Mcbride Company's website, which I built from the ground up. The site is built with semantic HTML, CSS, and JavaScript, and is fully responsive."
+    },
+    {
+      "sectionType": "button",
+      "text": "View Site",
+      "url": "https://mcbridedesign.com/news-press"
+    },
+    {
+      "sectionType": "heading",
+      "text": "Article List Item"
+    },
+    {
+      "sectionType": "image",
+      "file": "article-list-item.png",
+      "maxWidth": "400px"
+    },
+    {
+      "sectionType": "code",
+      "file": "article-list-item-small.twig",
+      "fileType": "twig"
+    },
+    {
+      "sectionType": "button",
+      "text": "View Article Listing",
+      "url": "https://mcbridedesign.com/news-press"
+    },
+    {
+      "sectionType": "heading",
+      "text": "Semantic DOM"
+    },
+    {
+      "sectionType": "image",
+      "file": "semantic-dom.png",
+      "maxWidth": "400px"
+    }
+  ]
+}

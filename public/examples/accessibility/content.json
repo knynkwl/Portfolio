@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "sectionType": "heading",
+      "text": "Accessibility"
+    },
+    {
+      "sectionType": "heading",
+      "text": "Menu Tab Trap"
+    },
+    {
+      "sectionType": "text",
+      "text": "Here is an example of a tab trap that I built. Opening the menu will trap the tab so the user can close and filter through the items without tabbing into the content outside. It is is accessible by keyboard and mouse."
+    },
+    {
+      "sectionType": "button",
+      "text": "View site",
+      "url": "https://documented.net/"
+    },
+    {
+      "sectionType": "video",
+      "file": "documented-tab-trap.webm",
+      "maxWidth": "400px"
+    }
+  ]
+}

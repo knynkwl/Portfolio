@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "sectionType": "heading",
+      "text": "Wordpress & PHP"
+    },
+    {
+      "sectionType": "text",
+      "text": "Here is a image component that I created for a Wordpress theme. It is a custom component that can be added to any page via a ACF builder. It allows the user to upload an image and add a caption. The image is then displayed in a responsive container with the caption below it."
+    },
+    {
+      "sectionType": "button",
+      "text": "Visit about page",
+      "url": "https://laurelhillphl.com/about/"
+    },
+    {
+      "sectionType": "image",
+      "file": "image-component.png"
+    },
+    {
+      "sectionType": "code",
+      "file": "app/theme/laural-hill/_components/single-image.php",
+      "fileType": "php"
+    }
+  ]
+}

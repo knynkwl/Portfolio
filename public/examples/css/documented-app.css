@@ -1,0 +1,22 @@
+/* src/css/app.css */
+
+// CSS Variables 
+@import "vars"; 
+
+// Resets, box-sizing, etc
+@import "base/**/*";
+
+//Header, footer, buttons, etc
+@import "globals/**/*";
+
+// containers, gridsm etc 
+@import "objects/**/*";
+
+// forms, accessibility, etc
+@import "elements/**/*";
+
+// site components (autoplay-accordion.css, facts-cards.css, etc)
+@import "components/**/*";
+
+// text styles, wysiwyg, utility classes
+@import "utils/**/*";

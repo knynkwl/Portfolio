@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "sectionType": "text",
+      "text": "<small>psst -> This site is built with NextJS. You can checkout the code <a href='https://github.com/knynkwl/Portfolio/tree/main' target='_blank'>here</a>.</small>"
+    },
+    {
+      "sectionType": "title",
+      "text": "NextJS & sanity.io"
+    },
+    {
+      "sectionType": "heading",
+      "text": "The Chalk Festival"
+    },
+    {
+      "sectionType": "text",
+      "text": "Below is a NextJS announcement slider component for the new <a href='https://chalkfestival.org' target='_blank'>Chalk Festival</a> website that I am designing (<a href='/examples/chalkfestival' target='_blank'>see preview</a>) and building. It utilizes the <b>jotai</b> state management library to manage app states. The slider allows navigation between announcements through buttons. The data is fetched asynchronously using the <b>fetchData</b> utility from the Sanity.io client. The component dynamically renders announcements based on fetched data, and each announcement may include an optional link."
+    },
+    {
+      "sectionType": "image",
+      "file": "frontend.png"
+    },
+    {
+      "sectionType": "image",
+      "file": "sanity.png"
+    },
+    {
+      "sectionType": "button",
+      "text": "View Demo",
+      "url": "https://the-chalk-festival.vercel.app/"
+    },
+    {
+      "sectionType": "heading",
+      "text": "components/AnnouncementSlider.tsx"
+    },
+    {
+      "sectionType": "code",
+      "file": "src/components/AnnouncementSlider.tsx",
+      "fileType": "typescript"
+    },
+    {
+      "sectionType": "heading",
+      "text": "store/atoms.ts"
+    },
+    {
+      "sectionType": "text",
+      "text": "<b>jotai</b> state management atoms"
+    },
+    {
+      "sectionType": "code",
+      "file": "src/store/atoms.ts",
+      "fileType": "typescript"
+    },
+    {
+      "sectionType": "heading",
+      "text": "utils/fetchData.ts"
+    },
+    {
+      "sectionType": "text",
+      "text": "fetchData utility helper function"
+    },
+    {
+      "sectionType": "code",
+      "file": "src/utils/fetchData.ts",
+      "fileType": "typescript"
+    },
+    {
+      "sectionType": "heading",
+      "text": "utils/sanity.ts"
+    },
+    {
+      "sectionType": "text",
+      "text": "Sanity client utility function, which creates a sanity client with the given dataset name which is set as enviroment variables."
+    },
+    {
+      "sectionType": "code",
+      "file": "src/utils/sanity.ts",
+      "fileType": "typescript"
+    },
+    {
+      "sectionType": "heading",
+      "text": "api/getData.ts"
+    },
+    {
+      "sectionType": "text",
+      "text": "<b>getData</b> utility function that calls sanity client to fetch data from a dataset."
+    },
+    {
+      "sectionType": "code",
+      "file": "src/app/api/getData/route.ts",
+      "fileType": "typescript"
+    }
+  ]
+}
