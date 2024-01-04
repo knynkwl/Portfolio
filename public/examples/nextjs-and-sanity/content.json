@@ -1,6 +1,10 @@
 {
   "data": [
     {
+      "sectionType": "text",
+      "text": "<small>psst -> This site is built with NextJS. You can checkout the code <a href='https://github.com/knynkwl/Portfolio/tree/main' target='_blank'>here</a>.</small>"
+    },
+    {
       "sectionType": "title",
       "text": "NextJS & sanity.io"
     },
@@ -27,7 +31,7 @@
     },
     {
       "sectionType": "heading",
-      "text": "AnnouncementSlider.tsx"
+      "text": "components/AnnouncementSlider.tsx"
     },
     {
       "sectionType": "code",
@@ -36,7 +40,7 @@
     },
     {
       "sectionType": "heading",
-      "text": "atoms.ts"
+      "text": "store/atoms.ts"
     },
     {
       "sectionType": "text",
@@ -49,7 +53,7 @@
     },
     {
       "sectionType": "heading",
-      "text": "fetchData.ts"
+      "text": "utils/fetchData.ts"
     },
     {
       "sectionType": "text",
@@ -62,7 +66,7 @@
     },
     {
       "sectionType": "heading",
-      "text": "sanity.ts"
+      "text": "utils/sanity.ts"
     },
     {
       "sectionType": "text",
@@ -75,7 +79,7 @@
     },
     {
       "sectionType": "heading",
-      "text": "getData.ts"
+      "text": "api/getData.ts"
     },
     {
       "sectionType": "text",
