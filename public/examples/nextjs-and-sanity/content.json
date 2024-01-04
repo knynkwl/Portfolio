@@ -20,7 +20,7 @@
     {
       "sectionType": "code",
       "file": "src/components/AnnouncementSlider.tsx",
-      "fileType": "tsx"
+      "fileType": "typescript"
     },
     {
       "sectionType": "heading",
@@ -33,7 +33,7 @@
     {
       "sectionType": "code",
       "file": "src/store/atoms.ts",
-      "fileType": "tsx"
+      "fileType": "typescript"
     },
     {
       "sectionType": "heading",
@@ -46,7 +46,7 @@
     {
       "sectionType": "code",
       "file": "src/utils/fetchData.ts",
-      "fileType": "tsx"
+      "fileType": "typescript"
     },
     {
       "sectionType": "heading",
@@ -59,7 +59,7 @@
     {
       "sectionType": "code",
       "file": "src/utils/sanity.ts",
-      "fileType": "ts"
+      "fileType": "typescript"
     },
     {
       "sectionType": "heading",
@@ -72,7 +72,7 @@
     {
       "sectionType": "code",
       "file": "src/app/api/getData/route.ts",
-      "fileType": "ts"
+      "fileType": "typescript"
     }
   ]
 }
