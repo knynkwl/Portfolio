@@ -65,10 +65,10 @@ const AnnouncementSlider = () => {
   return (
     <div className={`relative z-overlay flex announcement-slider transition-all duration-500 transform ${announcements.length ? `translate-x-0` : 'opacity-0 translate-x-2'} ${blurred.primary} ${borderBox} gap-6 text-white font-body`}>
       <div className="flex gap-4">
-        <button onClick={handlePrevSlide}>
+        <button onClick={handlePrevSlide} type="button">
           <Icon icon="arrow-left" />
         </button>
-        <button onClick={handleNextSlide}>
+        <button onClick={handleNextSlide} type="button">
           <Icon icon="arrow-right" />
         </button>
       </div>
