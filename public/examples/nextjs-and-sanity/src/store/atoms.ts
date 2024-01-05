@@ -6,11 +6,11 @@ type Announcement = {
   link: { [key: string]: any; text: string };
 };
 
-export const homeSliderAtom = atom([]);
+export const homeSliderAtom = atom<string[]>([]);
 export const announcementAtom = atom<Announcement[]>([]);
-export const navActiveAtom = atom(false);
-export const pageActiveAtom = atom(false);
-export const loadingAtom = atom(true);
-export const loadingDataAtom = atom({});
-export const headerHeightAtom = atom(0);
-export const modalVisibleAtom = atom(true);
+export const navActiveAtom = atom<boolean>(false);
+export const pageActiveAtom = atom<boolean>(false);
+export const loadingAtom = atom<boolean>(true);
+export const loadingDataAtom = atom<any>({});
+export const headerHeightAtom = atom<number>(0);
+export const modalVisibleAtom = atom<boolean>(true);
