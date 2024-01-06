@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import { Inter } from 'next/font/google'
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from '@vercel/analytics/react';
 import './globals.css'
 
 const Lora = localFont({ src: '../../public/Lora.woff2', variable: '--font-display' })
@@ -23,6 +24,8 @@ export default function RootLayout({
         <main className="flex min-h-screen items-center justify-center bg-blue-1">
           {children}
         </main>
+        
+        <Analytics />
         <SpeedInsights />
       </body>
     </html>
