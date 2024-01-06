@@ -18,10 +18,10 @@ interface DataItem {
   height?: string;
 }
 
-export default async function Home({ params }: { params: { slug: string[] } }) {
+export default async function ExamplePage({ params }: { params: { slug: string[] } }) {
   const file_path = `examples/${params.slug[0]}/`
 
-  const fetchDataAndSetState = async () => {
+  const fetchAndUpdate = async () => {
     try {
       const res = await fetchData(`${file_path}content.json`);
   
@@ -53,9 +53,9 @@ export default async function Home({ params }: { params: { slug: string[] } }) {
     }
   }
 
-  const data = await fetchDataAndSetState();
+  const data = await fetchAndUpdate();
 
-  console.log(data);
+  // console.log(data);
   
   return <Example data={data} filePath={file_path} />;
 }
