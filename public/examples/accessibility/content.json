@@ -10,7 +10,7 @@
     },
     {
       "sectionType": "text",
-      "text": "Here is an example of a tab trap that I built. Opening the menu will trap the tab so the user can close and filter through the items without tabbing into the content outside. It is is accessible by keyboard and mouse."
+      "text": "Accessibility is top of mind during every development project I work on. Here is an example of something that I implemented. Opening the menu will trap the tab so the user can close and filter through the items without tabbing into the content outside. It is is accessible by keyboard and mouse."
     },
     {
       "sectionType": "button",
