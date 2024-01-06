@@ -61,15 +61,16 @@ const Example = ({ data, filePath }: ExampleProps) => {
               )}
 
               {item.sectionType === 'video' && (
-                <Video
-                  key={`video-${index}`}
-                  loading="lazy"
-                  autoplay
-                  muted
-                  loop
-                  style={item.maxWidth ? { maxWidth: item.maxWidth } : {}}>
-                  <source src={`/${filePath}${item.file}`} type="video/webm" />
-                </Video>
+                <div key={`video-${index}`}>
+                  <Video
+                    loading="lazy"
+                    autoplay
+                    muted
+                    loop
+                    style={item.maxWidth ? { maxWidth: item.maxWidth } : {}}>
+                    <source src={`/${filePath}${item.file}`} type="video/webm" />
+                  </Video>
+                </div>
               )}
 
               {item.fileContent && (

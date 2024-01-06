@@ -1,7 +1,6 @@
 import React from 'react';
 
 interface VideoProps {
-  key: string;
   classes?: string;
   autoplay?: boolean;
   muted?: boolean;
@@ -18,7 +17,6 @@ declare module 'react' {
 }
 
 const Video: React.FC<VideoProps> = ({
-  key,
   classes,
   autoplay,
   muted,
@@ -29,7 +27,6 @@ const Video: React.FC<VideoProps> = ({
 }: VideoProps) => {
   return (
     <video
-      key={key}
       className={classes}
       autoPlay={autoplay}
       muted={muted}
