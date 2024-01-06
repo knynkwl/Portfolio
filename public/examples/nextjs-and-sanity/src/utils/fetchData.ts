@@ -1,8 +1,11 @@
-export default async (query: string, callback: (data: any) => void) => {
+'use server'
+
+export default async (query: string) => {
   try {
-    const response = await fetch(`/api/getData?${query}`);
+    const response = await fetch(`${process.env.TLD}/api/getData?${query}`);
     const data = await response.json();
-    callback(data);
+    
+    return data.data[0];
   } catch (error) {
     console.error('Error fetching data:', error);
   }
