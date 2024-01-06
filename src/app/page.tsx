@@ -1,7 +1,8 @@
-import React from 'react';
+'use server'
 
+import React from 'react';
 import Content from '@/components/Content';
 
-export default function Home() {
+export default async function Home() {
   return <Content />
 }

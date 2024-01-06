@@ -1,6 +1,8 @@
+import 'server-only';
+
 const fetchData = async (query: string, dataType: 'json' | 'text' = 'json') => {
   try {
-    const response = await fetch(`/${query}`);
+    const response = await fetch(`${process.env.TLD}/${query}`);
 
     if (dataType === 'json') {
       const data = await response.json();
