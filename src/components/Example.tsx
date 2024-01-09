@@ -57,6 +57,7 @@ const Example = ({ data, filePath }: ExampleProps) => {
                   height={item.height ? item.height : 0}
                   sizes="100vw"
                   className={`h-auto w-full`}
+                  loading="lazy"
                   style={item.maxWidth ? { maxWidth: item.maxWidth } : {}}/>
               )}
 
