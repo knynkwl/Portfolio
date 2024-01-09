@@ -118,6 +118,7 @@ const Projects: React.FC<ProjectsProps> = ({showContent}) => {
               src={image.split('|')[0]} 
               alt="Project" 
               fill={true} 
+              loading="lazy"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className={`relative z-20 flex-shrink-0 md:translate-y-4 group-hover:-translate-y-0 transition-transform duration-500 object-contain md:object-top md:object-cover will-change-transform`} />
             <div className="absolute bottom-[100%] left-0 w-full p-2 bg-white hidden md:inline-block md:translate-y-40 group-hover:-translate-y-0 transition-transform duration-500 z-10 text-blue-1 text-sm text-center will-change-transform">{image.split('|')[1].replace('https://', '')}</div>
