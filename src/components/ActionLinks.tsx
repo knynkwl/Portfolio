@@ -1,73 +1,63 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useRef } from 'react'
+
+const items = [
+  {
+    text: 'Résumé',
+    href: '/downloads/Kenyon_Kowal_Resume.pdf'
+  },
+  {
+    text: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/kenyonkowal'
+  },
+  {
+    text: 'Email',
+    href: 'mailto:hello@kenyonkowal.com'
+  }
+];
+
+const timeout_items: NodeJS.Timeout[] = [];
 
 const ActionLinks = ({showContent}: {showContent: boolean}) => {
   const [activeIndexes, setActiveIndexes] = useState<number[]>([]);
-  const [links, setLinks] = useState<{ text: string; href: string; }[]>([]);
+  const activeIndexesRef = useRef<number[]>(activeIndexes);
 
- useEffect(() => {
-  setLinks([
-    {
-      text: 'Résumé',
-      href: '/downloads/Kenyon_Kowal_Resume.pdf'
-    },
-    {
-      text: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/kenyonkowal'
-    },
-    {
-      text: 'Email',
-      href: 'mailto:hello@kenyonkowal.com'
-    }
-  ])
- }, [setLinks])
+  useEffect(() => {
+    activeIndexesRef.current = activeIndexes; 
+  }, [activeIndexes]);
 
   useEffect(() => {
     if (showContent) {
-      // Set up a timer to add 'active' class with a delay for each item
-      const timer = setTimeout(() => {
-        setActiveIndexes(Array.from({ length: links.length }, (_, index) => index));
-      }, 1000);
+      const timeoutId = setTimeout(() => {
+        items.forEach((item, index) => {
+          timeout_items[index] = setTimeout(() => {
+            setActiveIndexes((prev) => [...prev, index]);
+          }, (index + 1) * 200);
+        });
+      }, 2000)
 
-      // Clear the timer when the component is unmounted or when the skills change
-      return () => clearTimeout(timer);
+  
+      return () => {
+        clearTimeout(timeoutId)
+        timeout_items.forEach((timeout) => clearTimeout(timeout));
+      };
     }
-  }, [showContent, links]);
+  }, [showContent]);
   
-  const classes = 'rounded-full hover:bg-blue-3 hover:text-white transition-colors duration-300 px-3 py-2 font-body text-sm'
-  
-  console.log(activeIndexes);
+  const classes = 'inline-block rounded-full hover:bg-blue-3 hover:bg-opacity-50 hover:text-white duration-1000 px-3 py-2 font-body text-xs md:text-sm transition-all ease-out will-change-transform mix-blend-exclusion bg-[#7000ff6e] text-[white]'
   
   return (
-    <div className={`absolute z-10 right-0 top-0 m-8 flex gap-4 transition-all duration-1000 delay-500 ${showContent ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 translate-x-4 -translate-y-4'}`}>
+    <div className={`md:absolute z-10 right-0 top-0 md:m-8 flex gap-4`}>
 
-      {links.map((link, i) => (
+      {items.map((link, i) => (
         <a 
           href={link.href}
           key={i}
           target="_blank"
           rel="noopener noreferrer"
-          className={`${classes} ${activeIndexes.includes(i) ? 'bg-white text-blue-3' : 'bg-blue-3 text-white'}`}>
+          className={`${classes} ${activeIndexes.includes(i) ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
             {link.text}
         </a>
       ))}
-
-      {/* <a href="/downloads/Kenyon_Kowal_Resume.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={classes}>
-        Résumé
-      </a>
-      <a href="https://www.linkedin.com/in/kenyonkowal"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={classes}>
-        LinkedIn
-      </a>
-      <a 
-        href="mailto:hello@kenyonkowal.com" 
-        target="_blank"
-        rel="noopener noreferrer"
-        className={classes}>Email</a> */}
     </div>
   )
 }

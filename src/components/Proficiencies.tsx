@@ -8,54 +8,51 @@ interface ProficienciesProps {
   showContent: boolean;
 }
 
-const Proficiencies: React.FC<ProficienciesProps> = ({showContent}) => {
-  const [skills, setSkills] = useState<string[]>([
-    'typescript',
-    'react',
-    'nextjs',
-    'es6',
-    'css3',
-    'postcss',
-    'tailwind css',
-    'team management',
-    'figma',
-    'restapi',
-    'devops',
-    'aws',
-    'digital ocean',
-    'craftcms',
-    'contentful',
-    'webflow',
-    'wordpress',
-    'shopify plus',
-    'guitar|personal',
-    'jazz|personal',
-    'gardening|personal',
-    'dyslexic|personal',
-    'father|personal',
-    'wood working|personal'
-  ]);
+const skills = [
+  'typescript',
+  'react',
+  'nextjs',
+  'es6',
+  'css3',
+  'postcss',
+  'tailwind css',
+  'team management',
+  'figma',
+  'restapi',
+  'devops',
+  'aws',
+  'digital ocean',
+  'craftcms',
+  'contentful',
+  'webflow',
+  'wordpress',
+  'shopify plus',
+  'guitar|personal',
+  'jazz|personal',
+  'gardening|personal',
+  'dyslexic|personal',
+  'father|personal',
+  'wood working|personal'
+];
 
+const Proficiencies: React.FC<ProficienciesProps> = ({showContent}) => {
   const [shuffledSkills, setShuffledSkills] = useState<string[]>([]);
   const [activeIndexes, setActiveIndexes] = useState<number[]>([]);
   const [isHovered, setIsHovered] = useState(false);
   const [hasHovered, setHasHovered] = useState(false);
 
   useEffect(() => {
-    // Shuffle the skills array
     const shuffled = shuffle([...skills]);
     setShuffledSkills(shuffled);
 
     if (showContent) {
-      // Set up a timer to add 'active' class with a delay for each item
       const timer = setTimeout(() => {
         setActiveIndexes(Array.from({ length: shuffled.length }, (_, index) => index));
       }, 200);
 
-      // Clear the timer when the component is unmounted or when the skills change
       return () => clearTimeout(timer);
     }
-  }, [skills, showContent]); // Run the effect whenever skills change // Empty dependency array ensures useEffect runs only once, similar to componentDidMount
+  }, [showContent]);
 
   const handleHover = () => {
     setIsHovered(true);

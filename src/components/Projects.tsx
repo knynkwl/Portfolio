@@ -39,19 +39,20 @@ const Projects: React.FC<ProjectsProps> = ({showContent}) => {
 
       const mouseX: number = event.clientX;
       const windowCenter: number = window.innerWidth / 2;
-      const containerWidth = containerRef.current.offsetWidth;
-      const visibleAreaWidth = windowCenter * 2;
-      
-      // Calculate the minimum and maximum x-axis values
-      const minX = -containerWidth + visibleAreaWidth;
-      const maxX = containerWidth - visibleAreaWidth;
-      
-      const newTransformX: number = (windowCenter - mouseX) / windowCenter * containerWidth;
+      const containerWidth: number = containerRef.current.offsetWidth;
 
-      // Clamp newTransformX to be between minX and maxX
-      const clampedTransformX = Math.max(((minX/2) - 40), Math.min(((maxX/2) + 40), newTransformX));
+      const containerHalfed = containerWidth / 2;
+      const newMaxX = (containerHalfed - (windowCenter - 40));
+      const newMinX = -containerHalfed;
+      
+      const mouseNewX = mouseX - window.innerWidth / 2;
+      let mappedValue = ((mouseNewX / (window.innerWidth / 2)) * newMaxX);
+      mappedValue = Math.min(Math.max(mappedValue, newMinX), newMaxX);
+
+      const clampedTransformX = -Math.max(mappedValue, newMinX);
 
       setTargetTransformX(clampedTransformX);
+
     }
   };
 
@@ -59,23 +60,15 @@ const Projects: React.FC<ProjectsProps> = ({showContent}) => {
     setLerpFactor(0.04)
   }
   
-  const handleMouseLeave = () => {
-    // setTargetTransformX(0);
-    // setLerpFactor(0.1)
-  }
-  
   useEffect(() => {
-    // Shuffle the skills array
     const shuffled = shuffle([...project_images]);
     setShuffledSkills(shuffled);
 
     if (showContent) {
-      // Set up a timer to add 'active' class with a delay for each item
       const timer = setTimeout(() => {
         setActiveIndexes(Array.from({ length: shuffled.length }, (_, index) => index));
       }, 1000);
 
-      // Clear the timer when the component is unmounted or when the skills change
       return () => clearTimeout(timer);
     }
   }, [showContent]);
@@ -87,7 +80,6 @@ const Projects: React.FC<ProjectsProps> = ({showContent}) => {
     }
 
     const updateTransform = () => {
-      // Adjust the lerp factor for smoother transitions (you can experiment with different values)
       const lerpedTransformX = lerp(transformX, targetTransformX, lerpFactor);
       setTransformX(lerpedTransformX);
     };
@@ -100,12 +92,11 @@ const Projects: React.FC<ProjectsProps> = ({showContent}) => {
 
   return (
     <div
-      className="flex justify-center items-center gap-10 w-full md:fixed bottom-0 left-0 transform md:p-0 p-[30px]"
+      className="flex justify-center items-center gap-10 w-full md:fixed bottom-0 left-0 transform"
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
     >
-      <div ref={containerRef} className="md:flex grid w-full md:w-auto grid-cols-2 gap-3 md:gap-10 will-change-transform" style={{ transform: `translateX(${transformX}px)` }}>
+      <div ref={containerRef} className="md:flex grid w-full md:w-auto grid-cols-2 gap-3 md:gap-10 px-6 md:px-10 will-change-transform" style={{ transform: `translateX(${transformX}px)` }}>
         {shuffledSkills.map((image, index) => (
           <a
             key={index}
