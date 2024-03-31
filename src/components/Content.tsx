@@ -43,7 +43,7 @@ const Content = () => {
     <div className={`font-display relative bg-blue-2 border border-[#091949] md:overflow-hidden ${animate ? 'transition-all duration-1000' : ''} ${active ? 'w-[calc(100vw-40px)] md:h-[calc(100vh-40px)]' : 'w-[calc(100vw)] md:h-[calc(100vh)]'}`}>
       <div className={`py-[24px] px-6 md:px-10 relative z-10 flex items-start flex-col`}>
         <div className={`text-[30px] md:text-[42px] font-extralight transition-all duration-1000 ${showContent ? 'opacity-100 transform translate-x-0 translate-y-0' : 'opacity-0 -translate-x-2 -translate-y-2'}`}>Hey, I&#39;m Kenyon</div>
-        <p className={`text-lg md:mb-12 mb-2 max-w-[700px] font-light transition-all duration-1000 text-blue-3 ${showContent ? 'opacity-100 transform translate-x-0 translate-y-0' : 'opacity-0 -translate-x-3 -translate-y-3'}`}>Lead Full Stack Developer & Strategic Problem Solver</p>
+        <p className={`text-lg md:mb-12 mb-2 max-w-[700px] font-light transition-all duration-1000 text-blue-3 ${showContent ? 'opacity-100 transform translate-x-0 translate-y-0' : 'opacity-0 -translate-x-3 -translate-y-3'}`}>Senior Front-End Engineer - Curious Coder - Creative Thinker</p>
 
         <Proficiencies showContent={showContent} />
         <ActionLinks showContent={showContent} />

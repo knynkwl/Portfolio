@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 const items = [
   {
     text: 'Résumé',
-    href: '/downloads/Kenyon Kowal Résumé.pdf'
+    href: '/downloads/Kenyon_Kowal_CV.pdf'
   },
   {
     text: 'LinkedIn',
