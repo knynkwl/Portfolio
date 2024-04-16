@@ -49,9 +49,7 @@ const Content = () => {
         <ActionLinks showContent={showContent} />
       </div>
 
-
       <Background />
-      <Projects showContent={showContent}/>
     </div>
   )
 }
