@@ -2,16 +2,7 @@ import React, { useState, MouseEvent, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import styles from './Projects.module.css'
 import shuffle from '@/utils/shuffle';
-
-const project_images: string[] = [
-  '/project-mush.webp|https://eatmush.com',
-  '/project-britax.webp|https://us.britax.com',
-  '/project-documented.webp|https://documented.net',
-  '/project-sizzer.webp|https://sizzer.nl',
-  '/project-ivy.webp|https://www.ivyconnection.com',
-  '/project-mcbride.webp|https://mcbridedesign.com',
-  '/project-f-suite.webp|https://www.fsuite.co',
-];
+import works from '@/utils/works';
 
 const lerp = (start: number, end: number, factor: number) => {
   return start * (1 - factor) + end * factor;
@@ -61,7 +52,7 @@ const Projects: React.FC<ProjectsProps> = ({showContent}) => {
   }
   
   useEffect(() => {
-    const shuffled = shuffle([...project_images]);
+    const shuffled = shuffle([...works]);
     setShuffledSkills(shuffled);
 
     if (showContent) {

@@ -43,7 +43,7 @@ const ActionLinks = ({showContent}: {showContent: boolean}) => {
     }
   }, [showContent]);
   
-  const classes = 'inline-block rounded-full hover:bg-blue-3 hover:bg-opacity-50 hover:text-white duration-1000 px-5 py-2 font-body text-xs md:text-sm transition-all ease-out will-change-transform mix-blend-exclusion bg-[#7000ff6e] text-[white]'
+  const classes = 'inline-block rounded-full hover:underline hover:bg-opacity-50 hover:text-white duration-1000 font-body text-xs md:text-sm transition-all ease-out will-change-transform mix-blend-exclusion text-[white]'
   
   return (
     <div className={`md:absolute z-10 right-0 top-0 md:m-8 flex gap-4`}>
