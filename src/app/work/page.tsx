@@ -19,7 +19,7 @@ export default function Page() {
 
       <div className="grid grid-cols-3 gap-6 py-[24px] px-6 md:px-10 relative z-10">
         {works.map((work, index) => (
-          <div key={index} className="aspect-video bg-blue-2 relative group hover:bg-blue-3">
+          <div key={index} className="aspect-video bg-blue-2 bg-opacity-0 relative group hover:bg-blue-3 transition-colors duration-500">
             <a
               key={index}
               href={`${work.split('|')[1]}`}
@@ -33,7 +33,7 @@ export default function Page() {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className={`p-2 object-contain object-top border overflow-hidden`} />
 
-              <p className="absolute bottom-0 left-0 p-4 bg-blue-2 group-hover:bg-blue-3 w-full text-xs text-center">{work.split('|')[1].replace('https://', '')}</p>
+              <p className="absolute bottom-0 left-0 p-4 bg-blue-2 group-hover:bg-blue-3 w-full text-xs text-center transition-colors duration-500">{work.split('|')[1].replace('https://', '')}</p>
             </a>
           </div>
         ))}
