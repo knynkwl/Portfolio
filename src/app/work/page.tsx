@@ -33,7 +33,7 @@ export default function Page() {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className={`p-2 object-contain object-top border overflow-hidden`} />
 
-              <p className="absolute bottom-0 left-0 p-4 bg-blue-2 group-hover:bg-blue-3 w-full text-xs text-center">{work.split('|')[1]}</p>
+              <p className="absolute bottom-0 left-0 p-4 bg-blue-2 group-hover:bg-blue-3 w-full text-xs text-center">{work.split('|')[1].replace('https://', '')}</p>
             </a>
           </div>
         ))}
